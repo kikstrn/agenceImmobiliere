@@ -1,0 +1,419 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Immo 2020</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="src/img/logo.jpg"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/contact.css">
+    <script src="https://kit.fontawesome.com/9d71c70935.js" crossorigin="anonymous"></script>
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<!-- Début Header -->
+<header class="w-100 border-bottom border-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="src/img/logo.jpg" id="logo"  alt="Logo_immo">
+            <small id="Titre" class="text-dark">Immo 2020</small>
+        </a>
+        <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-dark menu" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark menu" href="view/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#exampleModalCenter2">
+            <i class="fas fa-user text-light"></i>&nbsp;&nbsp;Mon compte
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle2">Connexion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <a id="new_user" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" class="float-right"><U>Nouvel utilisateur?</U></a>
+                                <label for="InputEmail2">Adresse Email  <small class="text-danger" id="msgEmail2"></small></label>
+                                <input type="email" class="form-control" id="InputEmail2" aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">Ne partagez jamais votre e-mail avec une autre personne</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPassword1">Mot de passe  <small class="text-danger" id="msgMdp"></small></label>
+                                <input type="password" class="form-control" id="InputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check1">
+                                <label class="form-check-label" for="Check1">Resté connecté</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                        <button type="button" id="boutonModal1" class="btn btn-dark">Connexion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" id="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Inscription</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputtext2">Nom * <small class="text-danger" id="msgName"></small></label>
+                                <input placeholder="Dupont" type="text" class="form-control" id="exampleInputtext2" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputtext3">Prénom * <small class="text-danger" id="msgnFirstame"></small></label>
+                                <input placeholder="Dupont" type="text" class="form-control" id="exampleInputtext3" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail2">Adresse Email * <small class="text-danger" id="msgnMailInscription"></small></label>
+                                <input placeholder="Dupont.dupont@gmail.com" type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputadresse">Adresse * <small class="text-danger" id="msgnAdresse"></small></label>
+                                <input type="text" class="form-control" id="exampleInputadresse" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputVille">Ville * <small class="text-danger" id="msgnVille"></small></label>
+                                <input type="text" class="form-control" id="exampleInputVille" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword2">Mot de passe *</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword3">Confirmez le mot de passe *</label>
+                                <input type="password" class="form-control" id="exampleInputPassword3">
+                                <small class="text-danger" id="msgErrorMdp"></small>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                        <button type="button" id="boutonModal2" class="btn btn-dark mr-auto"  data-target="#exampleModalCenter2">
+                            Connexion
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!--Fin Header -->
+
+
+<!--<div id="content"></div>-->
+<div class="border-bottom border-dark mb-5">
+    <h3 class="text-center m-2 infos">À Propos</h3>
+    <p class="text-center">Immo 2020 est une agence immobilière, elle a été crée dans les années 90's. Basé à la base sur Lille, elle s'est étendue partout en France
+        et est devenue leader sur le marché de l'immobilier. Que vous cherchiez un bien à acheter ou à louer, Immo 2020 est là pour vous trouver le meilleur. Vous êtes investisseur ?
+        Nous avons les biens qu'il vous faut. Nos conseillers seront ravis de vous aider dans vos recherches, alors n'hesitez plus et venez pousser la porte d'entrée !</p>
+</div>
+
+<!--Bouton filter-->
+<div class="border border-dark mb-5 mt-3">
+    <a class="btn btn-dark mt-2 mb-2 ml-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fas fa-filter text-light"></i>&nbsp;Filtrer
+    </a>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body mb-2">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="choix">Je souhaite</label>
+                        <select  class="form-control form-control-sm verif" id="choix" >
+                            <option value="acheter">Acheter</option>
+                            <option value="louer">Louer</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="bien">Type de bien</label>
+                        <select  class="form-control form-control-sm verif" id="bien" >
+                            <option value="maison">Maison</option>
+                            <option value="appartement">Appartement</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="piece">Nombre de pièces</label>
+                        <select  class="form-control form-control-sm verif" id="piece" >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="localisation">Localisation</label>
+                        <select  class="form-control form-control-sm verif" id="localisation" >
+                            <option value="localite">Toutes les localités</option>
+                            <option value="nord">59 Nord</option>
+                            <option value="Lille">Lille (59000)</option>
+                            <option value="Loos">Loos (59120)</option>
+                            <option value="Ronchin">Ronchin (59790)</option>
+                            <option value="Tourcoing">Tourcoing (59200)</option>
+                            <option value="Wattignies">Wattignies (59139)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label for="budget" class="col-sm-2 col-form-label">Buget max</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="budget" aria-label="budget">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">€</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-6">
+                    <div class="form-group row">
+                        <label for="surface" class="col-sm-2 col-form-label">Surface max</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="surface" aria-label="surface">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">m²</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-outline-dark btn-lg btn-block">Rechercher</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fin bouton filter -->
+
+    <!--Contenu logement-->
+    <div class="container">
+        <div class="row mb-3 mx-auto">
+            <!--Maison1-->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="card float-right">
+                    <a href="view/logement1.html" class="mouse"><img src="src/img/maison1.jpg" class="card-img-top" alt="maison1"></a>
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><i class="fas fa-map-marker-alt text-dark"></i>&nbsp;Lille (59000)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <h5>610 000€</h5>
+                <p>Maison de 275m² sur l'extrémité de Lille</p>
+                <p>10 pièces</p>
+            </div>
+            <div class="col-lg-2 align-self-center">
+                <a class="text-dark float-right" href="view/logement1.html"><i class="fas fa-2x fa-search-plus"></i><br><small>Voir détails</small></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <!--Maison2-->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="card float-right">
+                    <a href="view/logement2.html" class="mouse"><img src="src/img/maison2.jpg" class="card-img-top" alt="maison1"></a>
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><i class="fas fa-map-marker-alt text-dark"></i>&nbsp;Loos (59120)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <h5>332 500€</h5>
+                <p>Maison de 70,1 m² sur l'extrémité de Lille</p>
+                <p>5 pièces</p>
+            </div>
+            <div class="col-lg-2 align-self-center">
+                <a class="text-dark float-right" href="view/logement2.html"><i class="fas fa-2x fa-search-plus"></i><br><small>Voir détails</small></a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <!--Appartement1-->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="card float-right">
+                    <a href="view/logement3.html" class="mouse"><img src="src/img/appt1.jpg" class="card-img-top" alt="maison1"></a>
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><i class="fas fa-map-marker-alt text-dark"></i>&nbsp;Ronchin (59790)</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <h5>699€ /mois C.C</h5>
+                <p>Appartement T3</p>
+                <p>Appartement dans une résidence calme</p>
+                <p>3 pièces</p>
+            </div>
+            <div class="col-lg-2 align-self-center">
+                <a class="text-dark float-right" href="view/logement3.html"><i class="fas fa-2x fa-search-plus"></i><br><small>Voir détails</small></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row mb-3">
+            <!--Appartement2-->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="card float-right">
+                    <a href="view/logement4.html" class="mouse"><img src="src/img/appt2.jpg" class="card-img-top" alt="maison1"></a>
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><i class="fas fa-map-marker-alt text-dark"></i>&nbsp;Tourcoing (59200)</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <h5>990€ /mois C.C</h5>
+                <p>Appartement T4</p>
+                <p>Appartement citué en centre ville</p>
+                <p>78,43 m²</p>
+            </div>
+            <div class="col-lg-2 align-self-center">
+                <a class="text-dark float-right" href="view/logement4.html"><i class="fas fa-2x fa-search-plus"></i><br><small>Voir détails</small></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin contenu logement-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-3  bg-dark">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mx-auto">
+
+                <!-- Content -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 text-light">Immo 2020</h5>
+                <small class="text-light">Ouvert du lundi au vendredi de :<br>8h30 à 12h et 14h à 18h30 </small>
+                <small class="text-light"><br>Et le samedi de 10h à 18h.</small>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 text-light">Nos Agences</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p class="text-light">Lille</p>
+                    </li>
+                    <li>
+                        <p class="text-light">Paris</p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mx-auto">
+
+                <!-- Links -->
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-2 text-light">Nous retrouver</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://facebook.com" target="_blank" class="text-light"><i class="fab fa-2x fa-facebook-square text-light"></i>&nbsp;Immo 2020</a>
+                    </li>
+                    <li>
+                        <p class="text-light">39 rue nationale<br>59000 LILLE</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Grid column -->
+
+    <hr class="clearfix w-100 d-md-none">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-1 text-light">© 2020 Copyright:
+        <a href="index.html" class="text-light"> Immo2020.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="src/js/main.js"></script>
+</body>
+
+</html>

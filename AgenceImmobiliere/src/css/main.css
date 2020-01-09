@@ -1,0 +1,29 @@
+.menu{
+  font-size: 20px;
+}
+
+.menu:hover{
+  background-color:darkgrey;
+}
+
+#Titre{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#new_user{
+  cursor: pointer;
+}
+
+.mouse{
+  cursor: pointer;
+}
+
+.infos{
+  text-decoration: underline;
+}
+
+#modal-content {
+  height:58vh;
+  overflow-y:auto ;
+}

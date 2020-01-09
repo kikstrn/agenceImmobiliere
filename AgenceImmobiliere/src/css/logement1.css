@@ -1,0 +1,59 @@
+#maps{
+    width: 60%;
+    height: 426px;
+    float: right;
+}
+
+
+.bg1{
+    background-color: #DADADA;
+}
+
+.bg2{
+    background-color: #ECECEC;
+}
+
+.mouse{
+    cursor: pointer;
+}
+
+
+.gm-style-iw-t {
+    bottom: 60px;
+    right: 0px;
+}
+
+
+@media screen and (max-width: 1050px) {
+    #maps {
+        width: 76%;
+        height: 294px;
+        float: right;
+    }
+
+    #photo_logement{
+        width: 157%;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    #maps {
+        width: 100%;
+        height: 426px;
+        float: right;
+        margin-top: 2%;
+    }
+
+    #photo_logement{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #maps {
+        width: 100%;
+        height: 232px;
+        float: right;
+    }
+}
