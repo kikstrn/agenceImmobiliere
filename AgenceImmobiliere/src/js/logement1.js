@@ -63,6 +63,7 @@ function initMap(listener) {
 
     let directionsService = new google.maps.DirectionsService();
     let directionsDisplay = new google.maps.DirectionsRenderer({'map': map});
+    let distance = new google.maps.DistanceMatrixService;
     let request = {
         origin: agence,
         destination: home,
@@ -73,6 +74,7 @@ function initMap(listener) {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
             directionsDisplay.setOptions({'suppressMarkers': true});
+            direct
         }
     });
 
